@@ -1,0 +1,350 @@
+﻿<WorkflowService mc:Ignorable="sads sap sap2010" p1:TextExpression.Namespaces="{x:Reference __ReferenceID3}" p1:TextExpression.References="{x:Reference __ReferenceID4}" ConfigurationName="Service1" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap2010:WorkflowViewState.IdRef="WorkflowService_1" Name="Service1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel"
+ xmlns:a="clr-namespace:Assignment3WF;assembly=Assignment3WF"
+ xmlns:aa="clr-namespace:Assignment3WF.ASUServiceRef;assembly=Assignment3WF"
+ xmlns:aaa="clr-namespace:Assignment3WF.ASUServiceRef.Activities;assembly=Assignment3WF"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:p="http://tempuri.org/"
+ xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.ComponentModel;assembly=System"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence p1:TextExpression.Namespaces="{x:Reference __ReferenceID3}" p1:TextExpression.References="{x:Reference __ReferenceID4}" sap2010:WorkflowViewState.IdRef="Sequence_6">
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="__handle1" />
+      <x:Reference>__ReferenceID2</x:Reference>
+    </p1:Sequence.Variables>
+    <p1:Parallel sap2010:WorkflowViewState.IdRef="Parallel_3">
+      <p1:Sequence DisplayName="Sequential Service" sap2010:WorkflowViewState.IdRef="Sequence_1">
+        <p1:TextExpression.Namespaces>
+          <sco:Collection x:TypeArguments="x:String" x:Name="__ReferenceID3">
+            <x:String>System</x:String>
+            <x:String>System.Collections.Generic</x:String>
+            <x:String>System.Data</x:String>
+            <x:String>System.Linq</x:String>
+            <x:String>System.Text</x:String>
+            <x:String>System.ServiceModel.Activities</x:String>
+          </sco:Collection>
+        </p1:TextExpression.Namespaces>
+        <p1:TextExpression.References>
+          <sco:Collection x:TypeArguments="p1:AssemblyReference" x:Name="__ReferenceID4">
+            <p1:AssemblyReference>Microsoft.CSharp</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Web.DynamicData</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Drawing</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Web.Entity</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Web.ApplicationServices</p1:AssemblyReference>
+            <p1:AssemblyReference>System</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Activities</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Core</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Data</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Data.Entity</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Runtime.Serialization</p1:AssemblyReference>
+            <p1:AssemblyReference>System.ServiceModel</p1:AssemblyReference>
+            <p1:AssemblyReference>System.ServiceModel.Activities</p1:AssemblyReference>
+            <p1:AssemblyReference>System.ServiceModel.Channels</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Web</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Xaml</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Xml</p1:AssemblyReference>
+            <p1:AssemblyReference>System.Xml.Linq</p1:AssemblyReference>
+            <p1:AssemblyReference>mscorlib</p1:AssemblyReference>
+            <p1:AssemblyReference>Assignment3WF</p1:AssemblyReference>
+          </sco:Collection>
+        </p1:TextExpression.References>
+        <p1:Sequence.Variables>
+          <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+          <p1:Variable x:TypeArguments="x:String" Name="creditNum" />
+          <p1:Variable x:TypeArguments="x:Int32" Name="outIssuer" />
+          <p1:Variable x:TypeArguments="x:Boolean" Name="outResult" />
+          <p1:Variable x:TypeArguments="x:Boolean" Name="outCheckCreditNum" />
+          <p1:Variable x:TypeArguments="CorrelationHandle" Name="__handle3" />
+          <p1:Variable x:TypeArguments="x:String" Name="inDate" />
+          <p1:Variable x:TypeArguments="s:DateTime" Name="dateNow" />
+          <p1:Variable x:TypeArguments="x:Boolean" Name="outExpDate" />
+          <p1:Variable x:TypeArguments="x:Boolean" Name="outCheckExpDate" />
+          <p1:Variable x:TypeArguments="x:Boolean" Name="outCVV" />
+          <p1:Variable x:TypeArguments="x:String" Name="inCVV" />
+        </p1:Sequence.Variables>
+        <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap2010:WorkflowViewState.IdRef="Receive_1" OperationName="CheckCreditNumber" ServiceContractName="p:IService">
+          <Receive.CorrelationInitializers>
+            <RequestReplyCorrelationInitializer>
+              <RequestReplyCorrelationInitializer.CorrelationHandle>
+                <p1:InArgument x:TypeArguments="CorrelationHandle">
+                  <mca:CSharpValue x:TypeArguments="CorrelationHandle">handle</mca:CSharpValue>
+                </p1:InArgument>
+              </RequestReplyCorrelationInitializer.CorrelationHandle>
+            </RequestReplyCorrelationInitializer>
+          </Receive.CorrelationInitializers>
+          <ReceiveParametersContent>
+            <p1:OutArgument x:TypeArguments="x:String" x:Key="parameter1">
+              <mca:CSharpReference x:TypeArguments="x:String">creditNum</mca:CSharpReference>
+            </p1:OutArgument>
+            <p1:OutArgument x:TypeArguments="x:String" x:Key="parameter2">
+              <mca:CSharpReference x:TypeArguments="x:String">inCVV</mca:CSharpReference>
+            </p1:OutArgument>
+            <p1:OutArgument x:TypeArguments="x:String" x:Key="parameter3">
+              <mca:CSharpReference x:TypeArguments="x:String">inDate</mca:CSharpReference>
+            </p1:OutArgument>
+          </ReceiveParametersContent>
+        </Receive>
+        <p1:Parallel sap2010:WorkflowViewState.IdRef="Parallel_2">
+          <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <p1:If sap2010:WorkflowViewState.IdRef="If_1">
+              <p1:If.Condition>
+                <p1:InArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpValue x:TypeArguments="x:Boolean">creditNum.Length.Equals(16)</mca:CSharpValue>
+                </p1:InArgument>
+              </p1:If.Condition>
+              <p1:If.Then>
+                <p1:Parallel sap2010:WorkflowViewState.IdRef="Parallel_1">
+                  <a:checkCreditNum sap2010:WorkflowViewState.IdRef="checkCreditNum_1">
+                    <a:checkCreditNum.CreditNumber>
+                      <p1:InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String">creditNum</mca:CSharpValue>
+                      </p1:InArgument>
+                    </a:checkCreditNum.CreditNumber>
+                    <a:checkCreditNum.CreditResult>
+                      <p1:OutArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpReference x:TypeArguments="x:Boolean">outCheckCreditNum</mca:CSharpReference>
+                      </p1:OutArgument>
+                    </a:checkCreditNum.CreditResult>
+                  </a:checkCreditNum>
+                  <a:checkIssuer sap2010:WorkflowViewState.IdRef="checkIssuer_1">
+                    <a:checkIssuer.CreditNum>
+                      <p1:InArgument x:TypeArguments="x:String">
+                        <mca:CSharpValue x:TypeArguments="x:String">creditNum</mca:CSharpValue>
+                      </p1:InArgument>
+                    </a:checkIssuer.CreditNum>
+                    <a:checkIssuer.Issuer>
+                      <p1:OutArgument x:TypeArguments="x:Int32">
+                        <mca:CSharpReference x:TypeArguments="x:Int32">outIssuer</mca:CSharpReference>
+                      </p1:OutArgument>
+                    </a:checkIssuer.Issuer>
+                  </a:checkIssuer>
+                </p1:Parallel>
+              </p1:If.Then>
+              <p1:If.Else>
+                <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <p1:Assign.To>
+                    <p1:OutArgument x:TypeArguments="x:Boolean">
+                      <mca:CSharpReference x:TypeArguments="x:Boolean">outCheckCreditNum</mca:CSharpReference>
+                    </p1:OutArgument>
+                  </p1:Assign.To>
+                  <p1:Assign.Value>
+                    <p1:InArgument x:TypeArguments="x:Boolean">False</p1:InArgument>
+                  </p1:Assign.Value>
+                </p1:Assign>
+              </p1:If.Else>
+            </p1:If>
+            <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <p1:Sequence.Variables>
+                <p1:Variable x:TypeArguments="CorrelationHandle" Name="__handle2" />
+              </p1:Sequence.Variables>
+              <p1:If sap2010:WorkflowViewState.IdRef="If_2">
+                <p1:If.Condition>
+                  <p1:InArgument x:TypeArguments="x:Boolean">
+                    <mca:CSharpValue x:TypeArguments="x:Boolean">inCVV.Length.Equals(outIssuer)</mca:CSharpValue>
+                  </p1:InArgument>
+                </p1:If.Condition>
+                <p1:If.Then>
+                  <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <p1:Assign.To>
+                      <p1:OutArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpReference x:TypeArguments="x:Boolean">outCVV</mca:CSharpReference>
+                      </p1:OutArgument>
+                    </p1:Assign.To>
+                    <p1:Assign.Value>
+                      <p1:InArgument x:TypeArguments="x:Boolean">True</p1:InArgument>
+                    </p1:Assign.Value>
+                  </p1:Assign>
+                </p1:If.Then>
+                <p1:If.Else>
+                  <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <p1:Assign.To>
+                      <p1:OutArgument x:TypeArguments="x:Boolean">
+                        <mca:CSharpReference x:TypeArguments="x:Boolean">outCVV</mca:CSharpReference>
+                      </p1:OutArgument>
+                    </p1:Assign.To>
+                    <p1:Assign.Value>
+                      <p1:InArgument x:TypeArguments="x:Boolean">False</p1:InArgument>
+                    </p1:Assign.Value>
+                  </p1:Assign>
+                </p1:If.Else>
+              </p1:If>
+            </p1:Sequence>
+          </p1:Sequence>
+          <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <a:checkExpDate sap2010:WorkflowViewState.IdRef="checkExpDate_1">
+              <a:checkExpDate.InDate>
+                <p1:InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">inDate</mca:CSharpValue>
+                </p1:InArgument>
+              </a:checkExpDate.InDate>
+              <a:checkExpDate.OutDate>
+                <p1:OutArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpReference x:TypeArguments="x:Boolean">outCheckExpDate</mca:CSharpReference>
+                </p1:OutArgument>
+              </a:checkExpDate.OutDate>
+            </a:checkExpDate>
+          </p1:Sequence>
+        </p1:Parallel>
+        <p1:If sap2010:WorkflowViewState.IdRef="If_5">
+          <p1:If.Condition>
+            <p1:InArgument x:TypeArguments="x:Boolean">
+              <mca:CSharpValue x:TypeArguments="x:Boolean">outCheckCreditNum &amp;&amp; outCVV &amp;&amp; outCheckExpDate</mca:CSharpValue>
+            </p1:InArgument>
+          </p1:If.Condition>
+          <p1:If.Then>
+            <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_7">
+              <p1:Assign.To>
+                <p1:OutArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpReference x:TypeArguments="x:Boolean">outResult</mca:CSharpReference>
+                </p1:OutArgument>
+              </p1:Assign.To>
+              <p1:Assign.Value>
+                <p1:InArgument x:TypeArguments="x:Boolean">True</p1:InArgument>
+              </p1:Assign.Value>
+            </p1:Assign>
+          </p1:If.Then>
+          <p1:If.Else>
+            <p1:Assign sap2010:WorkflowViewState.IdRef="Assign_8">
+              <p1:Assign.To>
+                <p1:OutArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpReference x:TypeArguments="x:Boolean">outResult</mca:CSharpReference>
+                </p1:OutArgument>
+              </p1:Assign.To>
+              <p1:Assign.Value>
+                <p1:InArgument x:TypeArguments="x:Boolean">False</p1:InArgument>
+              </p1:Assign.Value>
+            </p1:Assign>
+          </p1:If.Else>
+        </p1:If>
+        <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendReplyToReceiveRequest" sap2010:WorkflowViewState.IdRef="SendReply_3">
+          <SendParametersContent>
+            <p1:InArgument x:TypeArguments="x:Boolean" x:Key="parameter1">
+              <mca:CSharpValue x:TypeArguments="x:Boolean">outResult</mca:CSharpValue>
+            </p1:InArgument>
+          </SendParametersContent>
+        </SendReply>
+      </p1:Sequence>
+      <p1:Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+        <p1:Sequence.Variables>
+          <p1:Variable x:TypeArguments="x:String" Name="inputURL" />
+          <p1:Variable x:TypeArguments="x:String" Name="outputString" />
+        </p1:Sequence.Variables>
+        <Receive x:Name="__ReferenceID1" CanCreateInstance="True" sap2010:WorkflowViewState.IdRef="Receive_2" OperationName="getWebsite">
+          <Receive.CorrelationInitializers>
+            <RequestReplyCorrelationInitializer>
+              <RequestReplyCorrelationInitializer.CorrelationHandle>
+                <p1:InArgument x:TypeArguments="CorrelationHandle">
+                  <p1:VariableValue x:TypeArguments="CorrelationHandle">
+                    <p1:VariableValue.Variable>
+                      <p1:Variable x:TypeArguments="CorrelationHandle" x:Name="__ReferenceID2" Name="__handle2" />
+                    </p1:VariableValue.Variable>
+                  </p1:VariableValue>
+                </p1:InArgument>
+              </RequestReplyCorrelationInitializer.CorrelationHandle>
+            </RequestReplyCorrelationInitializer>
+          </Receive.CorrelationInitializers>
+          <ReceiveParametersContent>
+            <p1:OutArgument x:TypeArguments="x:String" x:Key="parameter1">
+              <mca:CSharpReference x:TypeArguments="x:String">inputURL</mca:CSharpReference>
+            </p1:OutArgument>
+          </ReceiveParametersContent>
+        </Receive>
+        <aaa:GetWebContent sap2010:WorkflowViewState.IdRef="GetWebContent_1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+          <aaa:GetWebContent.GetWebContentResult>
+            <p1:OutArgument x:TypeArguments="x:String">
+              <mca:CSharpReference x:TypeArguments="x:String">outputString</mca:CSharpReference>
+            </p1:OutArgument>
+          </aaa:GetWebContent.GetWebContentResult>
+          <aaa:GetWebContent.url>
+            <p1:InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">inputURL</mca:CSharpValue>
+            </p1:InArgument>
+          </aaa:GetWebContent.url>
+        </aaa:GetWebContent>
+        <SendReply Request="{x:Reference __ReferenceID1}" DisplayName="SendReplyToReceive" sap2010:WorkflowViewState.IdRef="SendReply_5">
+          <SendParametersContent>
+            <p1:InArgument x:TypeArguments="x:String" x:Key="parameter1">
+              <mca:CSharpValue x:TypeArguments="x:String">outputString</mca:CSharpValue>
+            </p1:InArgument>
+          </SendParametersContent>
+        </SendReply>
+      </p1:Sequence>
+    </p1:Parallel>
+    <sads:DebugSymbol.Symbol>d0NDOlxVc2Vyc1xtaW5oblxEb3dubG9hZHNcQXNzaWdubWVudDNXRlxBc3NpZ25tZW50M1dGXFNlcnZpY2UxLnhhbWx4NhMDmwIRAQEYBZkCEwECGQfrARUBHuwBB5gCFQEDSglfEwK3AmAJxAEXAX/FAQnjAREBTeQBCeoBFQEf8QEJhAITAReFAgmQAh0BDJECCZcCFQEEXA9cWwLlAlkPWVoC1gJWD1ZeAscCTxNPYAK4AmELtQEZAqABtgELwwEZAoAByAEPyAGMAQFOzAEN1QEZAW7YAQ3hARkBXecBD+cBVwE+gQIPgQJdARn2ARP6ASYBGIgCD4gCYQESjQIPjQJVAQ2UAg+UAlkBB2INkAEVAtcBkQENtAEbAqEBtwENwgEeAoEB0wE80wFAAX7PARPPAWMBb98BPN8BQQFt2wET2wFjAV5lE2VtAtgBaRGCAR8C+AGFARGOAR0C5wGVAQ+zARcCogG6ARO6AVcCkQG/ARO/AWkCggFqE3UmApgCdhOBASMC+QGMAUCMAUUC9wGIAReIAW8C6AGYARWYAXICowGcAROlAR8CxQGoAROxAR8CswFyGXJxAqgCbRltYAKZAn4ZfmcCiQJ5GXlgAvoBowFCowFGAtYBnwEZnwFmAsYBrwFCrwFHAsQBqwEZqwFmArQB</sads:DebugSymbol.Symbol>
+  </p1:Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Receive_1" sap:VirtualizedContainerService.HintSize="1219,86" />
+      <sap2010:ViewStateData Id="checkCreditNum_1" sap:VirtualizedContainerService.HintSize="200,40" />
+      <sap2010:ViewStateData Id="checkIssuer_1" sap:VirtualizedContainerService.HintSize="200,40" />
+      <sap2010:ViewStateData Id="Parallel_1" sap:VirtualizedContainerService.HintSize="554,86" />
+      <sap2010:ViewStateData Id="Assign_1" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_1" sap:VirtualizedContainerService.HintSize="821,236" />
+      <sap2010:ViewStateData Id="Assign_2" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_3" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_2" sap:VirtualizedContainerService.HintSize="509,212" />
+      <sap2010:ViewStateData Id="Sequence_4" sap:VirtualizedContainerService.HintSize="821,336">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="843,736">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="checkExpDate_1" sap:VirtualizedContainerService.HintSize="200,22" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="222,736">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Parallel_2" sap:VirtualizedContainerService.HintSize="1219,782" />
+      <sap2010:ViewStateData Id="Assign_7" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="Assign_8" sap:VirtualizedContainerService.HintSize="242,62" />
+      <sap2010:ViewStateData Id="If_5" sap:VirtualizedContainerService.HintSize="1219,212" />
+      <sap2010:ViewStateData Id="SendReply_3" sap:VirtualizedContainerService.HintSize="1219,86" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="1241,1410">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Receive_2" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="GetWebContent_1" sap:VirtualizedContainerService.HintSize="255,22" />
+      <sap2010:ViewStateData Id="SendReply_5" sap:VirtualizedContainerService.HintSize="255,86" />
+      <sap2010:ViewStateData Id="Sequence_7" sap:VirtualizedContainerService.HintSize="277,1410">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Parallel_3" sap:VirtualizedContainerService.HintSize="1672,1456" />
+      <sap2010:ViewStateData Id="Sequence_6" sap:VirtualizedContainerService.HintSize="1694,1580">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WorkflowService_1" sap:VirtualizedContainerService.HintSize="1724,1650" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</WorkflowService>

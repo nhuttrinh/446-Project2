@@ -1,0 +1,241 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:#954F72;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	line-height:107%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;}
+span.UnresolvedMention
+	{mso-style-name:"Unresolved Mention";
+	color:#605E5C;
+	background:#E1DFDD;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72">
+
+<div class=WordSection1>
+
+<p class=MsoNormal><span style='font-size:16.0pt;line-height:107%;color:#2F5496'>ASSIGNMENT
+3 </span></p>
+
+<p class=MsoNormal><span style='font-size:16.0pt;line-height:107%;color:#2F5496'>NHUT
+TRINH</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:18.0pt;line-height:107%;color:#C45911'>USER MANUAL</span></p>
+
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
+style='color:#C45911'>(1)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#C45911'>Introduction to the Services:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle>This web application includes 2 services. They
+are running in parallel.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#538135'>Credit Card Validator: </span>The
+service takes 16-digit credit card number, CVV, and expiration date of the
+credit card. The service follows Luhn’s algorithm to check whether the credit
+card is VALID or INVALID to use. You can check out the algorithm here: <span
+class=MsoHyperlink><a href="https://en.wikipedia.org/wiki/Luhn_algorithm">https://en.wikipedia.org/wiki/Luhn_algorithm</a></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#7030A0'>Web to String: </span>The service
+takes URL of a website and returns its content as string file. This service is
+a remote service from ASU Service Respository. The service reference is here: <span
+class=MsoHyperlink><a
+href="http://neptune.fulton.ad.asu.edu/WSRepository/Services/Web2StringSVC/Service.svc">http://neptune.fulton.ad.asu.edu/WSRepository/Services/Web2StringSVC/Service.svc</a></span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='color:#C45911'>(2)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#C45911'>Description of the interface:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol;color:#538135'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><img width=624 height=385 src="ASSIGNMENT%203_files/image001.jpg"
+align=left hspace=12><span style='color:#538135'>Credit Card Validator:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in'>The service has
+three textboxes for credit card number, CVV, and expiration date. The button
+“Check Credit Card” is for validating the given card.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol;color:#7030A0'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#7030A0'>Web to String:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in'>The service has
+URL textbox. User must include http:// before the website address in order to
+run service. The “SUBMIT” button is used to convert a website to the string
+content. CONTENT area shows the result of the service. User must manually clear
+the content area before submit a new website.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
+style='color:#C45911'>(3)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><img width=624 height=313 src="ASSIGNMENT%203_files/image002.jpg"
+align=left hspace=12><span style='color:#C45911'>Diagram</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'>(4)<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span><span
+style='color:#C45911'>Testing instructions: </span>User must run the Service1.xamlx
+in “Assignment3WF”, then run the web application “WFWebAppTryIt”.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol;color:#538135'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#538135'>Credit Card Validator: </span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#C00000'>Case 1</span>: Invalid card number (4400123456789123),
+valid CVV(345), and valid exp date(02/2021). Output INVALID card.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-.25in'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><img
+width=624 height=140 src="ASSIGNMENT%203_files/image003.jpg" align=left
+hspace=12><img width=624 height=136 src="ASSIGNMENT%203_files/image004.jpg"
+align=left hspace=12><span style='color:#C00000'>Case 2: </span>Valid card
+number (<span style='font-size:10.5pt;line-height:107%;font-family:"Helvetica",sans-serif;
+color:#333333;background:white'>4417123456789113)</span>, invalid CVV (22) ,
+valid exp date (06/2021). Output INVALID card.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-.25in'>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#C00000'>Case 3</span>: Valid card number (4532165694122417),
+valid CVV (235), invalid exp date (05/2019)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-.25in'>d.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><img
+width=624 height=148 src="ASSIGNMENT%203_files/image005.jpg" align=left
+hspace=12><img width=624 height=141 src="ASSIGNMENT%203_files/image006.jpg"
+align=left hspace=12><span style='color:#C00000'>Case 4</span>: valid credit
+card (6011036136791587), valid CVV (876), valid exp date (07/2022). Output VALID
+credit card.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.0in;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='color:#7030A0'>Web to String:</span></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='color:#C00000'>Case 1</span>: <span class=MsoHyperlink><a
+href="http://google.com">http://google.com</a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:1.25in'><img width=381
+height=359 src="ASSIGNMENT%203_files/image007.jpg" align=left hspace=12></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:1.25in;text-indent:-.25in'>b.
+<span style='color:#C00000'>Case 2</span>: <span class=MsoHyperlink><a
+href="http://facebook.com">http://facebook.com</a></span></p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:1.25in'><img width=401
+height=370 src="ASSIGNMENT%203_files/image008.jpg" align=left hspace=12></p>
+
+</div>
+
+</body>
+
+</html>
